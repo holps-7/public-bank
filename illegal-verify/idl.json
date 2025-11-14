@@ -1,0 +1,123 @@
+{
+    "address": "uWGrWGNk4enkjkboj6ErEW8FKDQBaFCUGqtpcw7Ea5m",
+    "metadata": {
+        "name": "merkle_gate",
+        "version": "0.1.0",
+        "spec": "0.1.0",
+        "description": "Created with Anchor"
+    },
+    "instructions": [
+        {
+            "name": "merkle_gate",
+            "discriminator": [
+                143,
+                149,
+                6,
+                175,
+                8,
+                80,
+                200,
+                62
+            ],
+            "accounts": [
+                {
+                    "name": "payer",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "state",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    109,
+                                    101,
+                                    114,
+                                    107,
+                                    108,
+                                    101
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                }
+            ],
+            "args": [
+                {
+                    "name": "leaf",
+                    "type": {
+                        "array": [
+                            "u8",
+                            32
+                        ]
+                    }
+                },
+                {
+                    "name": "proof",
+                    "type": {
+                        "vec": {
+                            "array": [
+                                "u8",
+                                32
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "challenge_id",
+                    "type": {
+                        "array": [
+                            "u8",
+                            32
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "accounts": [
+        {
+            "name": "MerkleState",
+            "discriminator": [
+                206,
+                169,
+                210,
+                196,
+                54,
+                110,
+                7,
+                217
+            ]
+        }
+    ],
+    "types": [
+        {
+            "name": "MerkleState",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "pwned",
+                        "type": "bool"
+                    },
+                    {
+                        "name": "challenge_id",
+                        "type": {
+                            "array": [
+                                "u8",
+                                32
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
