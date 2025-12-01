@@ -32,6 +32,8 @@ You are given a single resource:
 obscurix.hex
 ```
 
+`Submit a base64 encoded Transaction as flag`
+
 This hex dump does **not** belong to a program.
 It is merely the shell — the disguise.
 
@@ -43,3 +45,11 @@ Inside the obfuscated Rust lies:
 The dump is your battlefield.
 The fragments are your clues.
 The scuffle begins now.
+
+
+## **Hints**
+
+* Dont rely on GPT - it will hallucinate and lead you to a frontend job
+* Understand the Cipher and apply it to literally `everything`
+* Read some comments
+
