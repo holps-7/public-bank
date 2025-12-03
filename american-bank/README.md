@@ -1,27 +1,57 @@
-# 🏦 American Bank
+# 🏦 **American Bank**
 
-## 📖 The Situation
-
-You are an opportunistic agent who has discovered something interesting about the American Bank's vault system. The bank holds a large amount of liquid capital in its vaults, and its security monitoring is... peculiar.
-
-Management is obsessed with one thing: the book balance. That number in the ledger is checked constantly—if it changes, alarms sound, investigators swarm, and you're finished.
-
-Are the actual cash movements in and out of the vault monitored? Not in real time. Strange priorities for a bank, but here we are.
-
-Your goal is simple: extract all the liquid capital without triggering their surveillance system.
+Trust is built on paper. Paper burns.
 
 ---
 
-## What you have?
+## **The Situation**
 
-You are given a single resource:
+A financial institution stands tall, its ledgers pristine and its vault secured.
+
+The manager oversees everything with unwavering authority.  
+The books balance perfectly.  
+The surveillance systems report everything is in order.
+
+But something feels... off.
+
+Management is obsessed with one thing: **the numbers on paper**.  
+That ledger is checked constantly — if it changes, alarms sound, investigators swarm, game over.
+
+But the actual movement of value? The physical flow in and out?  
+Nobody's watching. Not in real time.
+
+Strange priorities for a bank. But exploitable.
+
+---
+
+## **What You Know**
+
+The manager's identity is public knowledge:
 
 ```
-IDL.json
+5aeTaxALJMxTdt5wQsdgYsxoyKZDBko18fTqwgae927g
 ```
 
-The IDL contains the program interface for bank's smart contract. Use it wisely.
+The vault is full.  
+The books are balanced.  
+The rules seem clear.
 
-**Submit a base64 `VersionedTransaction` (maybe check the instructions 👀?)**
+But rules are only as strong as their enforcement.
 
-> **Good luck, agent.**
+You have access to the institution's operational blueprint (`IDL.json`).
+
+---
+
+## **Your Mission**
+
+**Extract everything without triggering surveillance.**
+
+Leave the institution standing.  
+Leave the records unchanged.  
+Leave no trace except the empty vault.
+
+**Submit your move as a base64-encoded transaction.**
+
+The question isn't whether you can - it's whether you understand how trust works when nobody's actually checking.
+
+> Good luck, agent.
