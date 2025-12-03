@@ -1,0 +1,145 @@
+{
+    "address": "Amer1canBank1111111111111111111111111111111",
+    "metadata": {
+        "name": "american_bank",
+        "version": "0.1.0",
+        "spec": "0.1.0",
+        "description": "Created with Anchor"
+    },
+    "instructions": [
+        {
+            "name": "drain_liquid_capital",
+            "discriminator": [
+                157,
+                155,
+                217,
+                32,
+                86,
+                116,
+                224,
+                73
+            ],
+            "accounts": [
+                {
+                    "name": "bank",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    98,
+                                    97,
+                                    110,
+                                    107
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "manager",
+                    "relations": [
+                        "bank"
+                    ]
+                },
+                {
+                    "name": "to",
+                    "writable": true
+                }
+            ],
+            "args": []
+        },
+        {
+            "name": "setup_bank",
+            "discriminator": [
+                164,
+                194,
+                172,
+                169,
+                29,
+                14,
+                14,
+                22
+            ],
+            "accounts": [
+                {
+                    "name": "manager",
+                    "writable": true,
+                    "signer": true
+                },
+                {
+                    "name": "bank",
+                    "writable": true,
+                    "pda": {
+                        "seeds": [
+                            {
+                                "kind": "const",
+                                "value": [
+                                    98,
+                                    97,
+                                    110,
+                                    107
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "system_program",
+                    "address": "11111111111111111111111111111111"
+                }
+            ],
+            "args": [
+                {
+                    "name": "amount",
+                    "type": "u64"
+                }
+            ]
+        }
+    ],
+    "accounts": [
+        {
+            "name": "Bank",
+            "discriminator": [
+                142,
+                49,
+                166,
+                242,
+                50,
+                66,
+                97,
+                188
+            ]
+        }
+    ],
+    "errors": [
+        {
+            "code": 6000,
+            "name": "YouAreNotTheManager",
+            "msg": "You are dead, the bells rang!"
+        }
+    ],
+    "types": [
+        {
+            "name": "Bank",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "manager",
+                        "type": "pubkey"
+                    },
+                    {
+                        "name": "book_balance",
+                        "type": "u64"
+                    },
+                    {
+                        "name": "bump",
+                        "type": "u8"
+                    }
+                ]
+            }
+        }
+    ]
+}
