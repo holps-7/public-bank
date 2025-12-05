@@ -38,7 +38,7 @@ The rules seem clear.
 
 But rules are only as strong as their enforcement.
 
-You have access to the institution's operational blueprint (`IDL.json`).
+You have access to the institution's operational blueprint (`IDL.json`) and progam binary (american_bank.so).
 
 ---
 
